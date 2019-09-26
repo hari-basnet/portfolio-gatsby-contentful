@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Accordion from "../components/Accordion"
 import ServiceDetails from "../components/ServiceDetails"
+import SubPageHeader from "../components/SubPageHeader"
 
 const services = () => {
   const getServicePage = useStaticQuery(graphql`
@@ -46,15 +47,14 @@ const services = () => {
   } = servicePage
 
   return (
-    <>
-      <Layout>
-        <SEO title="Services" />
-        <ServiceDetails />
-        <div style={{ marginBottom: "40px" }}>
-          <Accordion />
-        </div>
-      </Layout>
-    </>
+    <Layout>
+      <SEO title="Services" />
+      <SubPageHeader />
+      <ServiceDetails />
+      <div style={{ marginBottom: "40px" }}>
+        <Accordion />
+      </div>
+    </Layout>
   )
 }
 

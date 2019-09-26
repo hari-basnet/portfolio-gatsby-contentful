@@ -1,65 +1,64 @@
-import React from 'react'
+import React from 'react';
 import Project from '../Project'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Button from '../Button'
 import './styles.css'
 
 
 const ProjectList = () => {
     const getProject = useStaticQuery(graphql`{
-
-        allProjects:allContentfulProject(sort:{fields:[order], order:ASC}) {
-          edges {
+    allProject : allContentfulProject(sort:{fields:[order], order:ASC}) {
+        edges {
             node {
-              id
-              image {
-                id
-                fixed(height:240, width: 320) {
-                  base64
-                  tracedSVG
-                  aspectRatio
-                  width
-                  height
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                }
-              }
-              title
-              order
+                title
+                order
+                image {
+                  fixed(height:240, width:320) {
+                    base64
+            aspectRatio
+            width
+            height
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            
             }
-          }
         }
-        
+        }
       }
-      `)
-
-    const { edges } = getProject.allProjects
-
+    } 
+}`)
     return (
-        <section id="portfolio-page" className="portfolio">
-            <div className="heading-container">
-                <div>
-                    <h3 className="heading-title heading-title--dark">My Latest Work</h3>
-                    <p>Take a look at some my recent projects</p>
-                </div>
-                <a className="portfolio__button" href="#">View All</a>
-            </div>
-            <div className="portfolio__container">
-                {
-                    edges.slice(0, 6).map(({ node: item }) => {
+        // <section id="portfolio-page" class="portfolio">
+        //     <div class="portfolio__container">
+        //         {getProject.allProject.edges.slice(0, 6).map(({ node: item }) => {
+        //             return (
+        //                 <Project image={item.image.fixed} title={item.title} />
+        //             )
+        //         })}
+        //     </div>
+        // </section>
+        <section className="section portfolio-section" id="services">
+            <div className="container">
+                <p className="normal-text">
+                    I provide <span className="gold-text">high quality</span> Event
+                    Management, Leadership Development and Project Management.
+              </p>
+                <div className="portfolio__container">
+                    {getProject.allProject.edges.slice(0, 6).map(({ node: item }) => {
                         return (
-                            <Project
-                                image={item.image.fixed}
-                                title={item.title}
-                            />
+                            <Project image={item.image.fixed} title={item.title} />
                         )
-                    })
-
-                }
+                    })}
+                </div>
+                <div className="button-wrapper">
+                    <Link to="/en/portfolio">
+                        <Button styleClass="btn-primary" text="Learn more" />
+                    </Link>
+                </div>
             </div>
         </section>
-    )
-}
-
-export default ProjectList
+    );
+};
+export default ProjectList;

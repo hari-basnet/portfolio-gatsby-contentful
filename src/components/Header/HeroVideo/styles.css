@@ -146,10 +146,6 @@ nav {
     background-repeat: no-repeat;
   }
 
-  .video-header {
-    height: 100vh;
-  }
-
   .header-content h1 {
     font-size: 5rem;
   }
@@ -157,12 +153,12 @@ nav {
 
 /* Small Phones: from 0 to 480 px such as Iphone 5*/
 @media only screen and (max-width: 480px) {
-  .header-content h1 {
+  .hero-text-box h1 {
     font-size: 4.5rem;
   }
 
   .animate-text-container {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
   }
 
   .header-content {
@@ -171,10 +167,6 @@ nav {
 
   header {
     background-position: top 50% right 100%;
-  }
-
-  .video-header {
-    height: 80vh;
   }
 }
 

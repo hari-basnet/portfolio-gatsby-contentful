@@ -85,7 +85,7 @@ const NavBar = () => {
                     ) : (
                         <Link
                           className={"navbar-link navbar-link-white"}
-                          to={`/en/#${item.link === "home" ? "" : item.link}`}
+                          to={`/en/#${item.link === "home" ? '' : item.link}`}
                           activeClassName={"navbar-link-active"}
                         >
                           {item.link}

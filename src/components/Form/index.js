@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
+import { graphql, StaticQuery } from 'gatsby'
 import { Title4 } from '../Title'
 import './styles.css'
-import { graphql, StaticQuery } from 'gatsby'
 
 const Form = () => {
   const [checkHome, setCheckHome] = useState(false)
@@ -64,7 +64,7 @@ const getContact = graphql`{
    contact:contentfulContact {
       title
       image{
-        fixed{
+        fixed(quality:100){
           src
         }
       }

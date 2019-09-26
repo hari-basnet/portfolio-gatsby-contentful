@@ -65,8 +65,7 @@ class Footer extends Component {
                   }
                 </div>
                 <p>
-                  Copyright &copy; 2019 Jaana Aalto-Setälä <br />
-                  Built with ♡ by Integrify developers
+                  Copyright &copy; 2019 Hari Basnet <br />
                 </p>
               </div>
             </div>

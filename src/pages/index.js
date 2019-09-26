@@ -1,8 +1,6 @@
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ServiceList from "../components/ServiceList"
 import Form from "../components/Form"
-import HeroVideo from "../components/Header/HeroVideo"
 import HeroImage from "../components/Header/HeroImage"
 import Testimonials from "../components/Testimonials"
 import AboutMe from "../components/AboutMe"
@@ -25,7 +23,6 @@ const IndexPage = ({ data }) => {
         title2={aboutme.title2}
         title3={aboutme.title3}
       />
-      <ServiceList />
       <ProjectList />
       <Testimonials />
       <BlogList posts={blogpost.edges} />

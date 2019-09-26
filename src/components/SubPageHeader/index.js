@@ -4,7 +4,7 @@ import './styles.css'
 
 const SubPageHeader = ({ img, children }) => {
     const backgroundStyle1 = {
-        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${img}) center/cover fixed no-repeat`
+        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img}) center/cover fixed no-repeat`
     }
     return (
         <header className="sub-page-header" style={backgroundStyle1}>
