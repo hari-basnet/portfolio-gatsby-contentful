@@ -167,6 +167,7 @@ nav {
 
   header {
     background-position: top 50% right 100%;
+    background-attachment: scroll;
   }
 }
 
