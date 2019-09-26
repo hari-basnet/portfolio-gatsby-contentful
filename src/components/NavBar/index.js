@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
+import Img from 'gatsby-image'
 import "./styles.css"
-import Logo from "../../assets/images/logo.png"
 
 const NavBar = () => {
   const [position, setPosition] = useState(0)
@@ -31,14 +31,35 @@ const NavBar = () => {
           }
         }
       }
+      navbarLogo: contentfulNavbarLogo {
+    id
+    logo {
+      id
+      fixed(width: 140) {
+        base64
+        aspectRatio
+        width
+        height
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+      }
+    }
+    firstName
+    lastName
+  }
     }
   `)
 
+  const { logo, firstName, lastName } = getNavBar.navbarLogo
   return (
-    <nav className={checkHome && position >= 500 ? "sticky" : null}>
+    < nav className={checkHome && position >= 500 ? "sticky" : null
+    }>
       <div className="container">
         <div className="flex-wrapper">
-          <img className="navbar-logo" src={Logo} />
+          {/* <img className="navbar-logo" src={logo.fixed.src} /> */}
+          <Img className="navbar-logo" fixed={logo.fixed} />
           <div className="navbar-links">
             <p
               className={
@@ -47,7 +68,7 @@ const NavBar = () => {
                   : "navbar-company-name-black"
               }
             >
-              Hari <br /> Basnet
+              {firstName} <br /> {lastName}
             </p>
             <ul className="navbar-nav-custom">
               {getNavBar.navLinks.edges.map(({ node: item }) => {
@@ -82,7 +103,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }
 export default NavBar

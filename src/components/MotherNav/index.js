@@ -15,6 +15,9 @@ const MotherNav = () => {
     }
   }, [width])
 
-  return width <= 767 ? <Navbar2 /> : <Navbar />
+  return (
+    <div style={{ position: "absolute" }}>
+      {width <= 767 ? <Navbar2 /> : <Navbar />}
+    </div>)
 }
 export default MotherNav
