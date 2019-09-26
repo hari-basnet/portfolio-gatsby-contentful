@@ -9,6 +9,7 @@ import AboutMe from "../components/AboutMe"
 import { graphql, useStaticQuery } from "gatsby"
 import BlogList from "../components/Blogs"
 import React from "react"
+import ProjectList from "../components/ProjectList"
 
 const IndexPage = ({ data }) => {
   const { aboutme, blogpost } = data
@@ -25,6 +26,7 @@ const IndexPage = ({ data }) => {
         title3={aboutme.title3}
       />
       <ServiceList />
+      <ProjectList />
       <Testimonials />
       <BlogList posts={blogpost.edges} />
       <Form />

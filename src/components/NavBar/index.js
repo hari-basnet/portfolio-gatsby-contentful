@@ -1,4 +1,3 @@
-// import React from "react"
 import React, { useEffect, useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
@@ -62,11 +61,7 @@ const NavBar = () => {
           <Img className="navbar-logo" fixed={logo.fixed} />
           <div className="navbar-links">
             <p
-              className={
-                checkHome
-                  ? "navbar-company-name-white"
-                  : "navbar-company-name-black"
-              }
+              className="navbar-company-name-white"
             >
               {firstName} <br /> {lastName}
             </p>
@@ -82,14 +77,14 @@ const NavBar = () => {
                         offset={-60}
                         duration={1200}
                         className={
-                          checkHome ? "navbar-link navbar-link-white" : null
+                          "navbar-link navbar-link-white"
                         }
                       >
                         {item.link}
                       </ScrollLink>
                     ) : (
                         <Link
-                          className={"navbar-link"}
+                          className={"navbar-link navbar-link-white"}
                           to={`/en/#${item.link === "home" ? "" : item.link}`}
                           activeClassName={"navbar-link-active"}
                         >
