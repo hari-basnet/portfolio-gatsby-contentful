@@ -169,6 +169,10 @@ nav {
     background-position: top 50% right 100%;
     background-attachment: scroll;
   }
+
+  .header__main {
+    background-attachment: scroll;
+  }
 }
 
 /* Remove extra space from bottom of component */
