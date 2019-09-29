@@ -2,9 +2,9 @@ require("dotenv").config() //eslint-disable-line
 
 module.exports = {
   siteMetadata: {
-    title: `Jaana Aalto-Setälä`,
-    description: `I offer Project Management, Career Coaching and Team Leadership advice and guidance to professionals aiming to improve their soft skills in these areas.`,
-    author: `Jaana Aalto-Setälä`,
+    title: `Hari Basnet`,
+    description: `Junior Front-End developer`,
+    author: `Hari Basnet`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,7 +35,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/jaana-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo_transparent.png`, // This path is relative to the root of the site.
       },
     },
     {
