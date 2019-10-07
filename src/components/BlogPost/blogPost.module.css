@@ -51,7 +51,6 @@
 
 .read {
   padding: 1rem 2.3rem;
-
   text-decoration: underline;
   margin: 0 auto;
   background: transparent;
@@ -74,8 +73,8 @@
   } */
 
   .image > div {
-  height: 20rem;
-}
+    height: 20rem;
+  }
 }
 
 /* Small phones to small tablets:481px to 767px*/
@@ -95,8 +94,6 @@
   }
 
   .image > div {
-  height: 35rem;
-}
-
-  
+    height: 35rem;
+  }
 }

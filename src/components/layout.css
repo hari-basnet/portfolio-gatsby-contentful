@@ -49,6 +49,10 @@ a:hover {
   text-decoration: none;
 }
 
+.project-page-title {
+  font-size: 22px;
+}
+
 /*-------------------------MEDIA QUERIES-----------------------*/
 
 /* Big tablet to 1200px (width smaller than the 1140px row) */

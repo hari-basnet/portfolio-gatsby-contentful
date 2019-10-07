@@ -1,8 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import Button from '../Button'
 import './styles.css'
 
-const Project = ({ image, title }) => {
+const Project = ({ image, title, link }) => {
     return (
         <figure className="portfolio__photos">
             <div className="inside">
@@ -13,7 +14,9 @@ const Project = ({ image, title }) => {
                         alt={title}
                     />
                     <span className="portfolio__hidden-title">
-                        <span>{title}</span>
+                        <a href={link} target="_blank" rel="noopener noreferrer">
+                            <Button styleClass="btn-primary" text={title} />
+                        </a>
                     </span>
                 </a>
             </div>

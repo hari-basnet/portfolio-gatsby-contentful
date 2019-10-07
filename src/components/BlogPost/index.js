@@ -8,21 +8,21 @@ const BlogPost = ({ post }) => {
   const img = post.image.fluid
 
   return (
-    <article className={blogPostStyles.card}>
-      <Link to={`/blog/${slug}`} className={blogPostStyles.blogLink}>
-        <div className={blogPostStyles.image}>
-          <Image fluid={img} />
-        </div>
-        <div className={blogPostStyles.info}>
-          <h2 className={blogPostStyles.title}>{title}</h2>
-          <h5 className={blogPostStyles.credits}>
-            <span>by {author}</span> / <span>{publishedDate}</span>
-          </h5>
+      <article className={blogPostStyles.card}>
+        <Link to={`/blog/${slug}`} className={blogPostStyles.blogLink}>
+          <div className={blogPostStyles.image}>
+            <Image fluid={img} />
+          </div>
+          <div className={blogPostStyles.info}>
+            <h2 className={blogPostStyles.title}>{title}</h2>
+            <h5 className={blogPostStyles.credits}>
+              <span>by {author}</span> / <span>{publishedDate}</span>
+            </h5>
 
-          <p className={blogPostStyles.read}>Read Post</p>
-        </div>
-      </Link>
-    </article>
+            <p className={blogPostStyles.read}>Read Post</p>
+          </div>
+        </Link>
+      </article>
   )
 }
 
