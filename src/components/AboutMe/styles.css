@@ -35,9 +35,7 @@
   -moz-box-shadow: -38px 38px 0px -26px rgba(212, 175, 55, 1);
   box-shadow: -36px 36px 0px -26px rgba(212, 175, 55, 1);
   background-repeat: no-repeat;
-  background-size: 55%;
-  background-position: 80% -90%;
-  background-attachment: fixed;
+  background-size: 100%;
 }
 
 .about_me_image img {
